@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/iziToast.css">
+    <script src="assets/js/iziToast.js"></script>
+    <script src="./launcher.js"></script>
+</head>
+<body>
+    <br>
+    <img style="width: 256px; background: transparent; border-radius: 50%;" src="https://image.flaticon.com/icons/png/512/136/136524.png">
+    <br>
+    <div class="container">
+        <div class="text">            
+            <br>
+            <h1 style="color: white;">Connectez-vous</h1>
+            <form>
+                <input type="email" id="username" placeholder="E-mail">
+                <br>
+                <br>
+                <input type="password" id="password" placeholder="Password">
+                <br>
+                <br>
+                <br>
+                <input type="button" id="loginbtn" value="Connexion"> 
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const ipc = require('electron').ipcRenderer
+
+        
+
+        var loginbtn = document.getElementById('loginbtn')
+
+        loginbtn.addEventListener("click",e => {
+            let username = document.getElementById("username").value
+            let password = document.getElementById("password").value
+
+            if (username && password) {
+                ipc.send("login", { u: username, p: password })
+                //loginbtn.style.display = "none";
+            }
+        })
+
+        ipc.on("err", (event, data) => {
+            iziToast.error({
+                title: 'Erreur !',
+                message: 'Mauvais identifiants / Trop de requêtes !',
+            });
+            playbtn.disabled = false;
+        })
+
+        ipc.on("done", () => {
+            iziToast.success({
+                title: 'Bienvenue !',
+                message: 'Vous vous êtes bien connecté !',
+            });
+        })
+
+        var logoutButton = document.getElementById("")
+</script>
+
+</body>
+</html>

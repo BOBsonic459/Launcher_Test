@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/iziToast.css">
+    <script src="./assets/js/iziToast.js"></script>
+    <script src="./assets/js/main.js"></script>
+</head>
+<body>
+    
+<script>
+    const shell = require('electron').shell
+    const ipc = require('electron').ipcRenderer
+
+    function ytb() {
+        shell.openExternal("https://www.youtube.com/")
+    }
+
+    function discord() {
+        shell.openExternal("https://discord.gg")
+    }
+
+    iziToast.success({
+        title: 'Bienvenue !',
+        message: 'Vous vous êtes bien connecté !',
+    });
+
+    function launch() {
+        var launch = document.getElementById('launch')
+        ipc.send("launch")
+    }
+
+
+
+</script>
+
+<div class="content">
+    <div class="social">
+        <div onclick="ytb()" id="ytb">
+            <br>
+            <img src="./assets/img/youtube.png"><p>Exemple</p>
+        </div>
+        <div onclick="discord()" id="discord">
+            <br>
+            <img style="width: 64px;" src="./assets/img/discord.png"><p>Exemple</p>
+        </div>
+    </div>
+    <button onclick="launch()" id="launch" class="launch">Lancez le jeux</button>
+    <br>
+    <iframe src="./log.html"></iframe>
+</div>
+
+</body>
+</html>
+
+<!-- palacrack576@gmail.com -->

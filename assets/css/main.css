@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+body {
+    background: url("https://i.pinimg.com/originals/fb/29/3b/fb293bc59dc1a7a057a199c391ebd173.png");
+    text-align: center;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    backdrop-filter: blur(4px);
+    height: 100vh;
+    background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    text-align: center;
+}
+
+input {
+    border: none;
+    padding: 10px;
+    color: white;
+    background: transparent;
+    outline: none;
+    border-bottom: 2px solid white;
+}
+
+input:focus {
+    -webkit-transition: 1s;
+    transition: 1s;
+    border: none;
+    padding: 10px;
+    color: white;
+    background: transparent;
+    outline: none;
+    border-bottom: 2px solid rgb(126, 126, 126);
+}
+
+input[type="button"] {
+    border: none;
+    padding: 10px;
+    color: white;
+    background: transparent;
+    outline: none;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    border: none;
+    padding: 10px;
+    color: white;
+    background: transparent;
+    outline: none;
+    border: 2px solid white;
+    background-color: rgb(126, 126, 126);
+    cursor: pointer;
+    -webkit-transition: 1s;
+    transition: 1s;
+    border-radius: 5px;
+}
+
+.div-one {
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+}
+
+.div-two {
+    text-align: center;
+    margin-top: -25px;
+}
+
+header {
+    position: fixed;
+    background-color: #252525;
+    color: white;
+    width: 100%;
+    height: 32px;
+    backdrop-filter: blur(16px);
+}
+
+.ui-btn {
+    margin: 0;
+    width: 48px;
+    height:32px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+.ui-btn:hover {
+    background: rgba(255,255,255,.1);
+}
+.ui-btn.close:hover {
+    background: #e81123;
+}
+.ui-btn svg path, 
+.ui-btn svg rect, 
+.ui-btn svg polygon {
+    fill: #fff;
+}
+.ui-btn svg {
+    width: 10px;
+    height: 10px;
+}
+
+.drag {
+    width: 100%;
+    height: 10px;
+    position: fixed;
+    -webkit-app-region: drag;
+    backdrop-filter: blur(64px);
+}
+
+.social {
+    background-color: #444444;
+    min-width: 277px;
+    width: 277px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 500px;
+    color: white;
+    margin-right: 20px;
+}
+
+.content {
+    background-color: #313131;
+    min-width: 100%;
+    width: 100%px;
+    position: fixed;
+    bottom: 0;
+    height: 400px;
+    color: white;
+}
+
+.launch {
+    padding: 7px;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    font-weight: bolder;
+    background-color: orange;
+    color: white;
+}
+
+.launch:hover {
+    background-color: orange;
+    color: white;
+}
