@@ -14,16 +14,6 @@
 > npm install
 ```
 
-==========================================================================
-
-# En cas de dépendance obselète ou non mise à jour : 
-
-```console
-> npm update
-```
-
-==========================================================================
-
 ```console
 > npm start
 ```
@@ -35,3 +25,13 @@ Build pour une plateforme spécifique :
 | Windows x64 | `npm run buildW`     |
 | macOS       | `npm run buildM`     |
 | Linux x64   | `npm run buildM`     |
+
+==========================================================================
+
+# En cas de dépendance obselète ou non mise à jour : 
+
+```console
+> npm update
+```
+
+==========================================================================
