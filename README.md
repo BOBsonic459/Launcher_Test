@@ -28,7 +28,7 @@ Build pour une plateforme spécifique :
 
 ==========================================================================
 
-# En cas de dépendance obselète ou non mise à jour : 
+## En cas de dépendance obselète ou non mise à jour : 
 
 ```console
 > npm update
